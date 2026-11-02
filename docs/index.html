@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hex 小白中文教程 · xianyu110</title>
+  <meta name="description" content="anomalyco/hex 社区非官方中文入门：本地语音听写安装、SenseVoice 中文模型、常见报错。" />
+  <style>
+    :root { color-scheme: light dark; --bg:#0f1419; --fg:#e7ecf3; --muted:#9aa7b5; --card:#1a2330; --accent:#6cb6ff; --ok:#3dd68c; }
+    @media (prefers-color-scheme: light) {
+      :root { --bg:#f6f8fb; --fg:#1b2430; --muted:#5b6b7c; --card:#fff; --accent:#0066cc; --ok:#0a7a44; }
+    }
+    body { margin:0; font-family: ui-sans-serif, system-ui, "Segoe UI", "PingFang SC", "Noto Sans SC", sans-serif; background:var(--bg); color:var(--fg); line-height:1.65; }
+    main { max-width: 720px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+    h1 { font-size: 1.75rem; margin: 0 0 .5rem; }
+    .sub { color: var(--muted); margin-bottom: 1.5rem; }
+    .card { background: var(--card); border-radius: 12px; padding: 1.25rem 1.35rem; margin: 1rem 0; box-shadow: 0 1px 0 rgba(0,0,0,.08); }
+    a { color: var(--accent); }
+    code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .9em; }
+    pre { background: #0b1220; color: #d7e2f0; padding: 1rem; border-radius: 8px; overflow:auto; }
+    @media (prefers-color-scheme: light) { pre { background:#111827; } }
+    .ok { color: var(--ok); font-weight: 600; }
+    ul { padding-left: 1.2rem; }
+    footer { margin-top: 2rem; color: var(--muted); font-size: .9rem; }
+    img.shot { max-width:100%; height:auto; border-radius:8px; margin:.75rem 0; border:1px solid rgba(127,127,127,.25); }
+    figcaption { color:var(--muted); font-size:.85rem; margin:.25rem 0 1rem; }
+    .tag-real { color:var(--ok); font-weight:600; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Hex 小白中文教程</h1>
+  <p class="sub">社区非官方导读 · 上游 <a href="https://github.com/anomalyco/hex">anomalyco/hex</a> · <a href="https://anoma.ly/hex">官网</a></p>
+  <div class="card">
+    <p><span class="ok">完整图文教程</span>在 GitHub README：</p>
+    <p><a href="https://github.com/xianyu110/awesome-hex-zh#readme"><strong>打开 README →</strong></a></p>
+  </div>
+  <div class="card">
+    <h2>30 秒上手</h2>
+    <pre>curl -fsSL https://anoma.ly/hex/install-linux.sh | sh
+hex -V
+hex start
+hex model install sense_voice_small
+hex model use sense_voice_small</pre>
+  </div>
+  <div class="card">
+    <h2>截图</h2>
+    <figure>
+      <img class="shot" src="images/01-install.png" alt="hex install" loading="lazy" />
+      <figcaption><span class="tag-real">真实截图</span> · hex 3.2.0</figcaption>
+    </figure>
+    <figure>
+      <img class="shot" src="images/02-model-list.png" alt="hex model list" loading="lazy" />
+      <figcaption><span class="tag-real">真实截图</span> · SenseVoice 在列表中</figcaption>
+    </figure>
+    <figure>
+      <img class="shot" src="images/03-status.png" alt="hex status" loading="lazy" />
+      <figcaption><span class="tag-real">真实截图</span> · status JSON</figcaption>
+    </figure>
+  </div>
+  <div class="card">
+    <h2>记住三件事</h2>
+    <ul>
+      <li>中文听写优先 SenseVoice，不要停在默认英文 Parakeet</li>
+      <li>控制命令前先 <code>hex start</code></li>
+      <li>转录默认本地；勿把密钥或私人路径贴进公开仓库</li>
+    </ul>
+  </div>
+  <footer>教程文本 MIT · 上游 MIT · 与 Anomaly 无官方隶属 · 2026-11-02</footer>
+</main>
+</body>
+</html>
